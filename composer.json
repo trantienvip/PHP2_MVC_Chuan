@@ -2,7 +2,8 @@
     "name": "php2/mvcc",
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Utils\\": "utils/"
         }
     },
     "require": {

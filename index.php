@@ -2,21 +2,10 @@
 
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
 require_once('./vendor/autoload.php');
-use App\Controllers\HomeController;
-use App\Controllers\UserController;
+require_once('./commons/database.php');
 
-switch ($url){
-    case '/':
-        $ctrl = new HomeController();
-        echo $ctrl->index();
-        break;
-    case 'user':
-        $ctrl = new UserController();
-        echo $ctrl->index();
-        break;
-
-    default:
-     break;
-}
+const BASE_URL = "http://localhost/php2/mvcc/";
+const PUBLIC_PATH = BASE_URL . "public/";
+\Utils\Routing::start($url);
 
 ?>
